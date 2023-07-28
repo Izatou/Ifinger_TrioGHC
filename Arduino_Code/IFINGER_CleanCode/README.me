@@ -1,0 +1,49 @@
+/*
+    ======= PWM ===============
+    0 = default ,
+    1 = set pwm
+    2 = set std
+    3 = set to default std
+    4 = save pwm to server
+ 
+   ====== Process of  Modes ========
+   0 ambil biasa dg prepos,
+   1 ambil dg nilai sensornya tampil,
+   2 ambil dg sensor tampil dan hasil,
+   3 ambil tanpa prepos ,
+   4 ambil dg hasil tampil tanpa prepos,
+   5 ambil tanpa prepos dan hasil
+
+   ==== Mode oled Information =======
+   0. Show With prepros
+   1. Show With prepros
+   2. Show analog val data (prepros)
+   3. Show With prepros
+   4. mode offline
+   5. Show analog val data (non prepros) (prepros) (raw)
+   6. Show analog val data (non prepros)
+   12. Show data from analog sensor
+
+
+   ================= Program Flow =================================
+   (1) Initiate all variable -> 
+   -> Show lcd information -> 
+   -> Receive identical information about that ifinger ini eeprom ->
+   -> LED Switching to check led works or not ->
+   -> Waiting for button, if want to change wifi information ->
+   -> Starting wifi ->
+   -> (if activate) Get identical data from wifi ->
+   -> (if not activate) offline mode based on eeprom data ->
+   (2) Start initiating program run ->
+   -> Start bluetooth mode ->
+   -> Start file manager server ->
+   -> Start upload debug server ->
+   (3) Waiting the finger to be detected->
+   -> Finger detected start take finger data ->
+   -> processing for extract features (sort and percentil)
+   -> save the data in variable ->
+   -> buffer data to be saved in sdcard ->
+   -> buffered data send it to server (EOP).
+   (4) (Repeat)
+*/
+
